@@ -1,0 +1,193 @@
+.home__social {
+  position: fixed; /* Fixa a posição dos ícones na página */
+  top: 50%; /* Alinha os ícones verticalmente ao centro da página */
+  left: 10px; /* Define a distância à esquerda da página (ajuste conforme necessário) */
+  transform: translateY(-50%); /* Ajusta a posição vertical para alinhar ao centro */
+  display: flex; /* Exibe os ícones em linha */
+  flex-direction: column; /* Alinha os ícones verticalmente */
+  align-items: flex-start; /* Alinha os ícones à esquerda verticalmente */
+  justify-content: flex-start; /* Alinha os ícones ao topo da página */
+  margin-left: 20px; /* Adicione margem à esquerda para separar os ícones da <p> */
+}
+
+/* Estilo para os ícones */
+.home__social-icon {
+  margin-bottom: 10px; /* Espaçamento entre os ícones (ajuste conforme necessário) */
+  font-size: 24px; /* Tamanho do ícone (ajuste conforme necessário) */
+  color: #c200ff; /* Cor do ícone do LinkedIn */
+  font-size: 24px; /* Tamanho dos ícones (ajuste conforme necessário) */
+  margin-bottom: 10px; /* Espaçamento entre os ícones (ajuste conforme necessário) */
+
+}
+
+/* Estilo para o ícone do GitHub */
+.home__social-icon .uil-github-alt {
+  color: #c200ff; /* Cor do ícone do GitHub */
+}
+
+.home__social-icon:hover {
+  color: #ff00da; /* Altera a cor ao passar o mouse (ajuste para a cor desejada) */
+}
+
+/* Efeito de hover para o ícone do GitHub */
+.home__social-icon .uil-github-alt:hover {
+  color: #ff00da; /* Altera a cor ao passar o mouse (ajuste para a cor desejada) */
+}
+
+.toolbar {
+  background-color: white;
+  justify-content: center;
+}
+
+.mat-toolbar span {
+  font-size: 15px;
+  margin-right: 10px; /* Adicione a margem direita desejada */
+}
+
+.toolbar-item {
+  transition: background 0.3s ease; /* Adiciona uma transição suave */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  /* Aplica um degradê roxo como plano de fundo padrão */
+  background: linear-gradient(to right, #6e00ff, #ad00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 30px;
+}
+
+.toolbar-item:hover {
+  /* Quando o mouse passa sobre o item, altera o degradê roxo para outro tom */
+  background: linear-gradient(to right, #c200ff, #ff00da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.toolbar-link {
+  text-decoration: none; /* Remove sublinhado */
+  color: inherit;
+}
+
+.toolbar-link-active::after {
+  content: '';
+  display: block;
+  width: 100%; /* A largura da linha é igual à largura do link */
+  height: 2px; /* A altura da linha */
+  background-color: #c200ff; /* A cor desejada */
+  margin-top: 0.5 px; /* Espaço entre o texto e a linha */
+}
+
+.menu-button {
+  display: none; /* Oculta o botão do menu por padrão */
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  color: #a529cb;
+  cursor: pointer;
+  position: fixed;
+}
+
+.close-menu-button{
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-container {
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff; /* Cor de fundo do menu */
+  position: absolute;
+  top: 56px; /* Ajuste conforme necessário */
+  right: 0;
+  z-index: 1; /* Para garantir que o menu esteja acima do conteúdo */
+  border: 1px solid #ccc; /* Estilo da borda do menu */
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.menu-list {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #a529cb; /* Cor de fundo do menu */
+  position: fixed;
+  top: 0; /* Exibição a partir do topo da tela */
+  left: 0;
+  width: 100%; /* Largura total da tela */
+  height: 0; /* Inicialmente oculto */
+  overflow: hidden;
+  transition: height 0.3s ease;
+  z-index: 1; /* Para garantir que o menu esteja acima do conteúdo */
+  &.menu-closed {
+    display: none;
+  }
+}
+
+.menu-open {
+  height: 50%; /* Exibe o menu quando isMenuOpen é verdadeiro */
+  transition: height 0.3s ease; /* Adiciona uma transição suave para a altura */
+}
+
+
+
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .toolbar {
+    display: none; /* Oculta a barra de navegação em telas menores */
+  }
+
+  .menu-button {
+    display: block; /* Exibe o botão do menu em telas menores */
+    z-index: 999;
+  
+  }
+  .home__social {
+    display: none;
+    
+  }
+
+  .toolbar-link {
+    color: white;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #a529cb; /* Cor de fundo do menu */
+    position: fixed;
+    top: 0; /* Exibição a partir do topo da tela */
+    left: 0;
+    width: 100%; /* Largura total da tela */
+    height: 500px; /* Inicialmente oculto */
+    overflow: hidden;
+    z-index: 1; /* Para garantir que o menu esteja acima do conteúdo */
+    &.menu-closed {
+      display: none;
+    }
+  }
+  
+}
+
+

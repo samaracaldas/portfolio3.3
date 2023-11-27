@@ -1,0 +1,101 @@
+.content {
+  display: flex;
+  margin-top: 110px;
+  margin-left: 60px; /* Reduzi a margem esquerda para diminuir espaços em telas menores */
+  margin-right: 60px; /* Reduzi a margem direita para diminuir espaços em telas menores */
+}
+
+
+.title {
+  font-size: 36px;
+  margin-bottom: 15px;
+  letter-spacing: 2px; /* Espaçamento entre letras */
+  font-family: 'Open Sans', sans-serif; /* Uma fonte moderna, você pode escolher outra de sua preferência */
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 30px;
+  margin-bottom: 15px;
+  letter-spacing: 2px; /* Espaçamento entre letras */
+  font-family: 'Open Sans', sans-serif; /* Uma fonte moderna, você pode escolher outra de sua preferência */
+  text-align: center;
+
+}
+
+.sub-title span {
+  border-bottom: 2px solid #a529cb; /* Cor do sublinhado */
+}
+
+
+.text {
+    margin-top: 80px;
+    margin-left: 60px;
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+
+}
+
+
+.image {
+  flex: 1; /* A imagem ocupa todo o espaço disponível à direita */
+  text-align: right; /* Alinha a imagem à direita */
+}
+
+.image img {
+  width: 100%; /* Ajusta a largura da imagem em relação à largura da tela */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.talk-to-me-button {
+  margin-top: 20px;
+  background-color: #a529cb; /* Cor de fundo roxo */
+  border-radius: 10px; /* Borda oval (50% do tamanho) */
+  padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+  color: white !important; /* Cor do texto branca */
+  font-size: 16px; /* Tamanho da fonte do texto */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+
+
+@media (max-width: 767px) {
+  .content {
+      flex-direction: column;
+      align-items: center;
+      margin: 20px; /* Ajustei a margem para uma versão responsiva */
+  }
+
+  .text {
+      margin-left: 0;
+      margin-right: 0; /* Reduzi as margens laterais */
+      text-align: center;
+  }
+
+  .image {
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+}
+
+/* Estilos para telas muito estreitas (largura máxima de 480px) */
+@media (max-width: 480px) {
+  .title {
+      font-size: 24px;
+  }
+
+  .sub-title {
+      font-size: 20px;
+  }
+
+  .text {
+      margin-top: 40px;
+      margin-left: 20px; /* Ajustei a margem esquerda para telas muito estreitas */
+      margin-right: 20px; /* Ajustei a margem direita para telas muito estreitas */
+  }
+}

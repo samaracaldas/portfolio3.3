@@ -1,0 +1,63 @@
+<div class="page-container">
+    <mat-toolbar class="toolbar">
+      <span class="toolbar-item"><a href="#home" class="toolbar-link">Home</a></span>
+      <span class="toolbar-item"><a href="#about-me" class="toolbar-link">Sobre Mim</a></span>
+      <span class="toolbar-item"><a href="#portfolio"  class="toolbar-link">Portfolio</a></span>
+      <span class="toolbar-item"><a href="#skills"  class="toolbar-link">Skills</a></span>
+      <span class="toolbar-item"><a href="#contact-me" class="toolbar-link">Fale Comigo</a></span>
+    </mat-toolbar>
+
+    <button class="menu-button" (click)="toggleMenu()">
+      <i class="uil uil-bars"></i>
+    </button>
+    
+    <ul class="menu-list" [ngClass]="{'menu-open': isMenuOpen, 'menu-closed': !isMenuOpen}">
+      <button class="close-menu-button" (click)="closeMenu()">
+        <i class="uil uil-times"></i>
+      </button>
+      <li class="toolbar-item">
+        <a (click)="closeMenuAndNavigateToAnchor('#home')" class="toolbar-link">
+          <i class="uil uil-home"></i>
+          Home
+        </a>
+      </li>
+      <li class="toolbar-item">
+        <a (click)="closeMenuAndNavigateToAnchor('#about-me')" class="toolbar-link" [routerLinkActive]="['toolbar-link-active']">
+          <i class="uil uil-user"></i>
+          Sobre Mim
+        </a>
+      </li>
+      
+      <li class="toolbar-item">
+        <a (click)="closeMenuAndNavigateToAnchor('#portfolio')" class="toolbar-link">
+          <i class="uil uil-image"></i>
+          Portfolio
+        </a>
+      </li>
+      <li class="toolbar-item">
+        <a (click)="closeMenuAndNavigateToAnchor('#skills')" class="toolbar-link">
+          <i class="uil uil-graduation-cap"></i>
+          Skills
+        </a>
+      </li>
+      <li class="toolbar-item">
+        <a (click)="closeMenuAndNavigateToAnchor('#contact-me')" class="toolbar-link">
+          <i class="uil uil-envelope"></i>
+          Fale Comigo
+        </a>
+      </li>
+    </ul>
+    
+  
+    
+  <div class="home__social">
+    <a href="https://www.linkedin.com/in/samara-caldas-1ab88120a/" target="_blank" class="home__social-icon linkedin-icon">
+      <i class="uil uil-linkedin-alt"></i>
+    </a>
+    <a href="https://github.com/samaracaldas" target="_blank" class="home__social-icon github-icon">
+      <i class="uil uil-github-alt"></i>
+    </a>
+  </div>
+
+</div>
+

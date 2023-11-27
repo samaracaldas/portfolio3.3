@@ -1,0 +1,124 @@
+.container {
+    margin-top: 200px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+}
+  .content {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .title span {
+    border-bottom: 2px solid #a529cb; /* Cor do sublinhado */
+  }
+
+  .socials {
+    flex-direction: column; /* Alinhar os ícones um abaixo do outro */
+    align-items: center;    /* Centralizar horizontalmente */
+    margin-bottom: 10px;
+  }
+
+  .social {
+    padding-top: 10px;
+    flex: 2;
+    display: flex;
+    flex-direction: column; /* Alinhar os ícones um abaixo do outro */
+    align-items: center;    /* Centralizar horizontalmente */
+  }
+  
+  .social-icon {
+    text-align: center;    /* Centralizar horizontalmente */
+    text-decoration: none;  /* Remover sublinhado dos links */
+    margin: 10px 8px;         /* Espaçamento entre os ícones */
+    color: #c200ff;            /* Cor padrão para os ícones */
+    font-size: 20px;
+  }
+  
+  
+  .text {
+    color: #000000;        /* Cor para o texto */
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column; /* Empilhe os elementos verticalmente */
+    align-items: center;
+    width: 40%; /* Defina a largura desejada, por exemplo, 70% */
+    margin: 0 auto;
+    margin-right: 45px;
+}
+
+mat-form-field {
+    width: 100%; /* Use toda a largura disponível */
+    margin-bottom: 15px;
+}
+
+button.mat-raised-button {
+    align-self: flex-start; /* Alinhe o botão à esquerda */
+}
+
+.talk-to-me-button {
+  margin-top: 20px;
+  background-color: #a529cb; /* Cor de fundo roxo */
+  border-radius: 10px; /* Borda oval (50% do tamanho) */
+  padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+  color: white !important; /* Cor do texto branca */
+  font-size: 16px; /* Tamanho da fonte do texto */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+  .copyright {
+    margin-top: 100px;
+    margin-bottom: 10px;
+  }
+
+
+
+  /* Estilos para telas menores (por exemplo, telas com largura menor que 768px) */
+  @media screen and (max-width: 768px) {
+    .container {
+      margin-top: 60px;
+      align-items: center;
+    }
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title {
+      margin-bottom: -15px;
+    }
+  
+    .social {
+      padding-top: 4px;
+      padding-bottom: 20px;
+    }
+
+    .social-icon {
+      font-size: 16px;
+    }
+  
+    .form {
+      width: 100%;
+      flex-direction: column; /* Empilhe os elementos verticalmente */
+      align-items: center;
+    }
+  
+    button.talk-to-me-button {
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+

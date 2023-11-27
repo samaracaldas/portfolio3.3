@@ -1,0 +1,142 @@
+.container {
+    margin-top: 200px;
+    padding-top: 100px;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+}
+
+.title {
+  margin-top: 30px;
+}
+
+.title span {
+  border-bottom: 2px solid #a529cb; /* Cor do sublinhado */
+}
+
+.mat-card {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.mat-card-content {
+  margin-bottom: 20px;
+}
+
+.card {
+  margin: 10px;
+  width: 350px;
+  height: 360px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  overflow: hidden
+}
+
+.card .backgroundEffect {
+  bottom: 0;
+  height: 0px;
+  width: 100%
+}
+
+.card:hover {
+  color: #000000;
+  transform: scale(1.025);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+}
+
+.card:hover .mat-card {
+  bottom: 0;
+  height: 320px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  animation: popBackground 0.3s ease-in
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.card-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card-title span{
+  border-bottom: 2px solid #a529cb; /* Cor do sublinhado */
+}
+
+
+.description {
+  margin-top: 6px;
+}
+
+.icons {
+  margin-bottom: 5px;
+}
+
+.icons img {
+/* Estilos regulares das imagens, sem hover */
+width: 35px; /* Defina o tamanho desejado */
+height: 35px; /* Defina o tamanho desejado */
+transition: transform 0.2s; /* Adiciona uma transição suave para a transformação */
+
+/* Efeito de escala ao passar o mouse (hover) */
+&:hover {
+  transform: scale(1.2); /* Aumenta a escala da imagem em 20% */
+}
+}
+
+.button {
+  background-color: none;
+  border: none;
+}
+
+.icon {
+  color: #a529cb; /* Defina a cor desejada para o ícone */
+}
+
+.text {
+  color: #a529cb; /* Defina a cor desejada para o texto */
+}
+
+
+
+
+/* Estilos para telas menores (por exemplo, telas com largura menor que 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 60px; /* Ajuste para telas menores */
+  }
+
+  .content {
+    margin: 10px; /* Ajuste para telas menores */
+  }
+
+  .card {
+    max-width: 100%; /* Largura total para telas menores */
+  }
+}
+
+
+
+
+
+
+

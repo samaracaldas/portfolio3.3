@@ -1,0 +1,100 @@
+.container {
+    margin-top: 200px;
+    padding-top: 100px;
+    align-items: center;
+    text-align: center;
+}
+  .content {
+      display: flex;
+      margin-top: 50px;
+      margin-left: 200px;
+      margin-right: 200px;
+      
+  }
+
+  .title span {
+    border-bottom: 2px solid #a529cb; /* Cor do sublinhado */
+  }
+
+  .mat-card {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .mat-card-content {
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    margin: 10px;
+    width: 350px;
+    height: 360px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    overflow: hidden
+  }
+
+  .card-title {
+    margin-bottom: 5px;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.skills{
+  margin: 10px;
+  margin-top: 15px;
+}
+
+.skill {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.text-above {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-left {
+  margin: 0;
+}
+
+.text-right {
+  margin: 0;
+}
+
+.mat-progress-bar {
+  width: 100%;
+  margin-top: 10px; /* Ajuste a margem conforme desejado */
+  color: #a529cb;
+}
+
+.subtitle{
+  margin-top: 5px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+      margin-top: 60px; /* Ajuste para telas menores */
+  }
+
+  .content {
+      margin: 10px; 
+    }
+
+}
