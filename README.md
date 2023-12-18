@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Portfolio 3</h1>
 
-<p align="center"><img src="https://socialify.git.ci/samaracaldas/portfolio3.3/image?font=Inter&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;theme=Light" alt="project-image"></p>
+![portfolio](https://github.com/samaracaldas/portfolio3.3/assets/92318337/bee421af-8abc-4f13-b723-dd3bda2eb4d2)
 
 <p id="description">Versão atualizada do meu Portfolio</p>
 
